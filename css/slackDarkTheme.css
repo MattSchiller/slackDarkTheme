@@ -491,12 +491,12 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
   color: #cccccc; }
 
 .c-message--light .c-message__sender .c-message__sender_link {
-  color: #a4d677 !important;
+  color: #c6c13f !important;
   font-weight: 700 !important;
   font-size: 14px !important; }
 
 .light_theme ts-message .message_content .message_sender {
-  color: #a4d677 !important;
+  color: #c6c13f !important;
   text-transform: capitalize;
   font-weight: 700 !important; }
 
@@ -529,7 +529,8 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__section_heading_label--unreads,
 .p-channel_sidebar__quickswitcher:hover {
-  color: #cccccc !important; }
+  color: #141414 !important;
+  background: #cccccc; }
 
 .p-download_item__actions {
   background: none; }
@@ -538,10 +539,10 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
   margin: 4px 0 -4px !important; }
 
 .p-file_list a {
-  color: green !important; }
+  color: #006039 !important; }
 
 .p-downloads_flexpane--list {
-  color: green !important; }
+  color: #006039 !important; }
 
 .p-channel_sidebar {
   font-size: 14px !important; }
@@ -676,7 +677,7 @@ a:hover {
   background: #141414 !important; }
 
 code {
-  color: #00cf35 !important; }
+  color: #a6d7f6 !important; }
 
 .searchable_member_list_filter,
 #client-ui #team_list_container .searchable_member_list_search {
@@ -787,16 +788,14 @@ a.file_download_link:hover,
 .p-channel_sidebar__link--unread .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
 .p-channel_sidebar__name {
-  border-left: 2px solid #ff5656;
-  padding-left: 6px;
-  height: 20px;
+  color: #00cf35;
   overflow: hidden;
   line-height: 16px;
   font-size: 17px;
   font-weight: 700; }
 
 .p-channel_sidebar {
-  border-right: 1px solid #464646 !important; }
+  border-right: 1px solid #333333 !important; }
 
 .p-search_filter__date_readout {
   color: #6397d7 !important; }
@@ -943,8 +942,8 @@ input[type="search"]:focus {
 
 .unread_group .unread_group_header .unread_group_mark,
 .unread_group .unread_group_header .unread_keyboard {
-  background: #339252 !important;
-  color: #cccccc !important; }
+  background: #00cf35 !important;
+  color: #141414 !important; }
 
 .p-threads_footer__input {
   background: black; }
@@ -999,7 +998,7 @@ input[type="search"]:focus {
   color: #6397d7 !important; }
 
 .c-message__sender {
-  color: #a4d677 !important; }
+  color: #c6c13f !important; }
 
 .c-dialog__footer .c-button {
   background-color: #2ead5c;
@@ -1012,7 +1011,7 @@ input[type="search"]:focus {
   color: #cccccc !important; }
 
 a.c-message__sender_link {
-  color: #a4d677 !important; }
+  color: #c6c13f !important; }
 
 .ql-editor[aria-label] {
   color: #cccccc !important; }
@@ -1329,13 +1328,13 @@ h4 {
   border-top: 1px solid #333333; }
 
 .c-message_list__unread_divider__label {
-  background: #f81111;
+  background: #ff5656;
   border: 1px solid transparent;
   text-transform: capitalize;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); }
 
 .c-message_list__unread_divider__label {
-  color: #cccccc;
+  color: #141414;
   padding: 3px 4px 4px;
   margin: -8px 0 -7px 0; }
 
@@ -1767,7 +1766,7 @@ textarea {
   color: #ffb400; }
 
 .c-message_list__day_divider__label__pill {
-  background: #474747 !important; }
+  background: #3e3e3e !important; }
 
 #im_browser .im_browser_row .im_display_name_container {
   font-size: 15px;
@@ -2374,7 +2373,7 @@ hr {
   color: #cccccc; }
 
 #unread_msgs_div .day_divider .day_divider_line {
-  border-top: 1px solid #3c3c3c; }
+  border-top: 1px solid #333333; }
 
 ts-message .action_hover_container .btn_msg_action {
   background: #181818; }
@@ -2398,7 +2397,7 @@ ts-message .action_hover_container .btn_msg_action {
 
 #fs_modal #fs_modal_header,
 #fs_modal #fs_modal_footer {
-  background: #232323; }
+  background: #141414; }
 
 .c-icon {
   color: #acacac; }
@@ -2659,7 +2658,7 @@ div.p-message_pane__foreword__description span {
   background: #141414 !important; }
 
 .p-workspace__input .p-message_input_field {
-  background: #474747;
+  background: #3e3e3e;
   border-radius: 4px;
   border-width: 1px;
   border-color: #333333;

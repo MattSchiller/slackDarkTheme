@@ -1,8 +1,16 @@
-$background-color: #222222;
+$background-color: #141414;
 $off-background-color-1: #474747;
+$off-background-color-2: #3e3e3e;
+$background-border-color: #333333;
 $text-color: #cccccc;
 $code-color: #29ffe8;
 $link-slack-internal-color: #36d4f6;
+$time-stamp-color: #6397d7;
+$button-color: #008952;
+$button-hover-color: #006039;
+$mention-hover-color: #de5ea2;
+$unread-marker-color: #ff5656;
+$message-sender-color: #a4d677;
 
 body {
   font-family: "Muli", sans-serif !important;
@@ -17,7 +25,7 @@ body {
 
 .p-member_directory__member_row {
   background-color: #1a1a1a !important;
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid $background-border-color !important;
 }
 
 .p-member_directory__member_row:focus,
@@ -26,15 +34,8 @@ body {
   background-color: $background-color !important;
 }
 .p-call_subtype {
-  border: 1px solid black !important;
+  border: 1px solid $background-border-color !important;
   background-color: #3f3f3f !important;
-}
-
-.CodeMirror-cursor {
-  border-left-color: rgba(255, 255, 255, 1) !important;
-}
-.CodeMirror-selected {
-  background-color: #60609f !important;
 }
 
 .c-button--outline-primary {
@@ -91,7 +92,7 @@ input[type="text"].c-input_text[disabled],
   background-color: $background-color !important;
 }
 .c-message__call_attachment {
-  border: 1px solid black !important;
+  border: 1px solid $background-border-color !important;
   background: #353535 !important;
 }
 .c-input_text[disabled] {
@@ -102,7 +103,7 @@ input[type="text"].c-input_text[disabled],
   color: $text-color;
 }
 .c-message__call_sub {
-  color: #ffb088 !important;
+  color: $time-stamp-color !important;
 }
 .p-call_button_base--active {
   background-color: #2c2d30 !important;
@@ -119,7 +120,7 @@ input[type="text"].c-input_text[disabled],
   color: $text-color;
 }
 .c-date_picker_calendar__date {
-  border: 1px solid black !important;
+  border: 1px solid $background-border-color !important;
 }
 .c-date_picker_calendar__date--disabled:hover,
 .c-mini_calendar__month_button:disabled:hover {
@@ -156,7 +157,7 @@ div.c-virtual_list__scroll_container {
 .light_theme ts-message .timestamp {
   line-height: 18px;
   opacity: 0;
-  color: #ffb088 !important;
+  color: $time-stamp-color !important;
 }
 
 .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
@@ -173,12 +174,12 @@ div.c-virtual_list__scroll_container {
 }
 #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
   box-shadow: none !important;
-  border-left: 1px solid #303030;
+  border-left: 1px solid $background-border-color;
 }
 
 #col_messages,
 #client_header {
-  border-left: 1px solid #303030;
+  border-left: 1px solid $background-border-color;
 }
 
 #team_menu,
@@ -230,7 +231,7 @@ ts-message .mention {
 }
 
 .btn {
-  background: #008952;
+  background: $button-color;
   color: $text-color;
   line-height: 1.2rem;
   font-weight: 900;
@@ -275,7 +276,7 @@ ts-message .mention {
   padding: 0px 2px 1px 2px;
 }
 .c-member_slug--link:hover {
-  background: #de5ea2;
+  background: $mention-hover-color;
   color: $text-color !important;
 }
 
@@ -304,13 +305,13 @@ ts-message .mention {
 .upload_in_threads.has_focus
   .inline_message_input_container
   .inline_file_upload {
-  background: #008952 !important;
-  border: 2px solid #008952 !important;
+  background: $button-color !important;
+  border: 2px solid $button-color !important;
   color: $text-color !important;
 }
 #primary_file_button:hover {
-  border: 2px solid #006039 !important;
-  background: #006039 !important;
+  border: 2px solid $button-hover-color !important;
+  background: $button-hover-color !important;
 }
 #primary_file_button {
   position: absolute;
@@ -319,8 +320,8 @@ ts-message .mention {
   left: 0;
   width: 44px;
   padding: 0;
-  border: 2px solid #008952 !important;
-  background: #008952 !important;
+  border: 2px solid $button-color !important;
+  background: $button-color !important;
   color: $text-color !important;
   line-height: 42px;
   text-shadow: none;
@@ -331,7 +332,7 @@ ts-message .mention {
   border-radius: 6px 0 0 6px;
 }
 .inline_file_upload {
-  background: #008952 !important;
+  background: $button-color !important;
   color: $text-color !important;
 }
 .p-share_dialog_message_input {
@@ -535,13 +536,13 @@ ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.n
   color: $text-color;
 }
 .c-message--light .c-message__sender .c-message__sender_link {
-  color: #a4d677 !important;
+  color: $message-sender-color !important;
   font-weight: 700 !important;
   font-size: 14px !important;
 }
 
 .light_theme ts-message .message_content .message_sender {
-  color: #a4d677 !important;
+  color: $message-sender-color !important;
   text-transform: capitalize;
   font-weight: 700 !important;
 }
@@ -708,7 +709,7 @@ a:hover {
 }
 .p-channel_sidebar__badge,
 .p-channel_sidebar__banner--mentions {
-  background: #cd2056 !important;
+  background: #cd2056 !important; // TODO
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2) !important;
 }
 .c-file_container {
@@ -830,7 +831,7 @@ a.file_download_link:hover,
 .p-channel_sidebar__link--unread .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
   .p-channel_sidebar__name {
-  border-left: 2px solid #ff5656;
+  border-left: 2px solid $unread-marker-color;
   padding-left: 6px;
   height: 20px;
   overflow: hidden;
@@ -842,7 +843,7 @@ a.file_download_link:hover,
   border-right: 1px solid #464646 !important;
 }
 .p-search_filter__date_readout {
-  color: #ffb28a !important;
+  color: $time-stamp-color !important;
 }
 .p-search_filter__date .c-icon--times-small {
   margin-right: 10px;
@@ -1013,7 +1014,7 @@ input[type="search"]:focus {
 .p-threads_footer__input--legacy .p-message_input_plus {
   border: 1px solid transparent !important;
   border-radius: 4px 0 0 4px;
-  background: #008952 !important;
+  background: $button-color !important;
 }
 .ql-editor [aria-label] {
   color: $text-color !important;
@@ -1040,10 +1041,10 @@ input[type="search"]:focus {
   opacity: 1 !important;
 }
 .c-timestamp__label {
-  color: #ffb088 !important;
+  color: $time-stamp-color !important;
 }
 .c-message__sender {
-  color: #a4d677 !important;
+  color: $message-sender-color !important;
 }
 .c-dialog__footer .c-button {
   background-color: #2ead5c;
@@ -1057,7 +1058,7 @@ input[type="search"]:focus {
 }
 
 a.c-message__sender_link {
-  color: #a4d677 !important ;
+  color: $message-sender-color !important ;
 }
 .ql-editor[aria-label] {
   color: $text-color !important;
@@ -1131,17 +1132,17 @@ a.c-message__sender_link {
   color: $link-slack-internal-color !important;
 }
 .c-message .c-button--primary {
-  background-color: #008952;
+  background-color: $button-color;
 }
 .c-message_kit__file__meta__text {
   font-size: 12px;
   color: #949494 !important;
 }
 .msg_input_btn {
-  background-color: #008952 !important;
+  background-color: $button-color !important;
 }
 .p-threads_footer__input--legacy .p-message_input_file_button {
-  background-color: #008952 !important;
+  background-color: $button-color !important;
   color: $text-color;
 }
 .sli_briefing {
@@ -1169,7 +1170,7 @@ a.c-message__sender_link {
 .sli_briefing__message
   ts-message:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display) {
   background-color: #313131;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .sli_briefing_view__footer_title {
   color: $text-color;
@@ -1178,7 +1179,7 @@ a.c-message__sender_link {
   color: #bfbfbf;
 }
 .sli_briefing__header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $background-border-color;
   background-color: #3b3b3b;
 }
 .sli_briefing__title {
@@ -1199,7 +1200,7 @@ a.c-message__sender_link {
 .p-threads_view__footer,
 .p-threads_view_root,
 .p-threads_view_reply {
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .p-threads_view__default_background {
   background: #323232;
@@ -1212,8 +1213,8 @@ a.c-message__sender_link {
   align-items: center;
   background: #535353;
   padding-left: 12px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid $background-border-color;
+  border-right: 1px solid $background-border-color;
 }
 
 .c-channel_name__text--inline {
@@ -1257,7 +1258,7 @@ a.c-message__sender_link {
 }
 .p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected {
   background: #383737;
-  border-color: black;
+  border-color: $background-border-color;
 }
 p,
 textarea.c-input_textarea.c-input_textarea--with_hint,
@@ -1282,10 +1283,10 @@ textarea.c-input_textarea.c-input_textarea--with_hint,
 }
 .c-action_buttons__button {
   background: #242424;
-  border-right: 1px solid black;
+  border-right: 1px solid $background-border-color;
 }
 .c-action_buttons {
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .c-action_buttons__button:hover .c-action_buttons__icon {
   color: #9d9d9d;
@@ -1366,7 +1367,7 @@ h4 {
   margin: 0;
 }
 .menu .menu_content {
-  background: #3e3e3e;
+  background: $off-background-color-2;
   box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -1376,7 +1377,7 @@ h4 {
   color: $text-color;
 }
 .menu_member_footer {
-  border-top: 1px solid black;
+  border-top: 1px solid $background-border-color;
 }
 .c-message_list__unread_divider__label {
   background: #f81111;
@@ -1395,7 +1396,7 @@ h4 {
   opacity: 1;
 }
 #col_messages {
-  box-shadow: inset 1px 0 0 0 black;
+  box-shadow: inset 1px 0 0 0 $background-border-color;
 }
 
 #col_messages,
@@ -1403,8 +1404,8 @@ h4 {
   border-left: 1px solid #464646;
 }
 .flex_pane_showing #col_flex {
-  border-left: 1px solid black;
-  box-shadow: inset 1px 0 0 0 black;
+  border-left: 1px solid $background-border-color;
+  box-shadow: inset 1px 0 0 0 $background-border-color;
 }
 .c-search_autocomplete__suggestion_item {
   color: $text-color;
@@ -1422,7 +1423,7 @@ h4 {
 }
 .c-message_group {
   padding: 7px 12px 12px 12px;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
   border-radius: 6px;
   margin-bottom: 10px;
   background-color: #4c4c4c;
@@ -1434,7 +1435,7 @@ h4 {
 }
 code {
   background: black;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 
 .c-menu.p-emoji_picker,
@@ -1465,14 +1466,14 @@ code {
   background: #232323;
 }
 .channel_header {
-  box-shadow: inset 1px 0 0 0 black;
+  box-shadow: inset 1px 0 0 0 $background-border-color;
 }
 .p-channel_insights .c-unified_member__title {
   color: #adadad;
 }
 .channel_page_member_row:hover {
   background-color: #424242;
-  border-color: black;
+  border-color: $background-border-color;
 }
 
 .btn_link:focus,
@@ -1502,7 +1503,7 @@ code {
 input.c-input_text,
 input[type="text"].c-input_text,
 input[type="password"].c-input_text {
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .p-emoji_picker__group_tab--active {
   margin-bottom: -1px;
@@ -1552,7 +1553,7 @@ pre {
   background: black;
 }
 #footer {
-  box-shadow: inset 1px 0 0 0 black;
+  box-shadow: inset 1px 0 0 0 $background-border-color;
 }
 .c-menu_item__button,
 .c-menu_item__button:link,
@@ -1579,7 +1580,7 @@ pre {
 #flex_contents .subheading:not(:empty)#mentions_options {
   background: black;
   border-top: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $background-border-color;
 }
 #flex_contents .help {
   font-size: 1rem;
@@ -1756,7 +1757,7 @@ textarea {
 }
 .lazy_filter_select .lfs_list .lfs_item.active {
   background-color: black;
-  border-color: black;
+  border-color: $background-border-color;
 }
 .black {
   font-weight: 700 !important;
@@ -1781,7 +1782,7 @@ textarea {
   .channel_browser_row:hover,
 #channel_browser .channel_browser_row.highlighted {
   background: #232323;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .sk_black {
   color: $text-color;
@@ -2044,7 +2045,7 @@ textarea {
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-  background-color: #3e3e3e !important;
+  background-color: $off-background-color-2 !important;
 }
 .c-keyboard_key {
   background: #575656;
@@ -2071,7 +2072,7 @@ textarea {
   background: $background-color;
 }
 #col_messages {
-  box-shadow: inset 1px 0 0 0 black !important;
+  box-shadow: inset 1px 0 0 0 $background-border-color !important;
 }
 .tab_container .star_item .message .star_jump.msg_right_link,
 .tab_container .star_item ts-message .star_jump.msg_right_link {
@@ -2100,6 +2101,12 @@ textarea {
 .modal label {
   color: $text-color;
 }
+.CodeMirror-cursor {
+  border-left-color: rgba(255, 255, 255, 1) !important;
+}
+.CodeMirror-selected {
+  background-color: #60609f !important;
+}
 .CodeMirror-scroll {
   background: black;
   color: $text-color;
@@ -2117,13 +2124,26 @@ textarea {
 .lazy_filter_select.single .lfs_input_container:after {
   color: $text-color;
 }
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
+.c-pillow_file__snippet__content .CodeMirror {
+  height: auto;
+  border: none;
+  color: $text-color;
+}
+.c-pillow_file__snippet__content .CodeMirror-code > div:before {
+  color: rgb(255, 101, 101);
+}
 #file_comment_textarea.texty_comment_input,
 .comment_form .texty_comment_input,
 .edit_comment_form .texty_comment_input {
   background: #212121;
 }
 .btn {
-  background: #008952;
+  background: $button-color;
   color: $text-color !important;
 }
 .c-button-unstyled:active,
@@ -2141,19 +2161,6 @@ textarea {
 .c-file__action_button:link,
 .c-file__action_button:visited {
   color: $text-color !important;
-}
-.CodeMirror {
-  position: relative;
-  overflow: hidden;
-  background: black;
-}
-.c-pillow_file__snippet__content .CodeMirror {
-  height: auto;
-  border: none;
-  color: $text-color;
-}
-.c-pillow_file__snippet__content .CodeMirror-code > div:before {
-  color: rgb(255, 101, 101);
 }
 .p-channel_sidebar__section_heading_label--clickable:hover {
   background: transparent;
@@ -2244,7 +2251,7 @@ select {
 .p-apps_browser__app--selected {
   border-radius: 6px;
   background: #2b2b2b;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .p-apps_browser__app_limit_meter b {
   color: $text-color;
@@ -2300,7 +2307,7 @@ select {
 }
 .p-channel_page_apps__list__row:hover .p-channel_page_apps__list__row__wrapper {
   background-color: #3c3c3c;
-  border-color: black;
+  border-color: $background-border-color;
 }
 .p-channel_page_apps__list__row:hover {
   color: $text-color;
@@ -2386,7 +2393,7 @@ hr {
 }
 .c-message__reply_bar:hover,
 .c-message__reply_bar--focus {
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 .c-select_button,
 .c-select_button:active {
@@ -2434,7 +2441,7 @@ hr {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  border-top: 1px solid black;
+  border-top: 1px solid $background-border-color;
   background: #363636;
   color: $text-color;
 }
@@ -2507,7 +2514,7 @@ ts-message .reply_bar:hover {
   .channel_browser_row:hover:not(.disabled),
 #channel_browser .channel_browser_row.highlighted {
   background: $background-color;
-  border: 1px solid black;
+  border: 1px solid $background-border-color;
 }
 #fs_modal .fs_modal_btn:hover {
   color: $text-color;
@@ -2577,7 +2584,7 @@ ts-message .reply_bar:hover {
 .p-app_profile_flexpane_header__button {
   color: $text-color !important;
 }
-channel_invite_tokens input {
+.channel_invite_tokens input {
   background: transparent !important;
 }
 #channel_invite_tokens #channel_invite_filter:first-child {
@@ -2660,7 +2667,7 @@ channel_invite_tokens input {
 }
 .p-message_pane__search_tip_banner_content {
   background-color: #343434 !important;
-  border: 1px solid black !important;
+  border: 1px solid $background-border-color !important;
   color: $text-color !important;
 }
 #search_container.is-highlighted .search_form {
@@ -2734,7 +2741,7 @@ div.p-message_pane__foreword__description span {
   background: $off-background-color-1;
   border-radius: 4px;
   border-width: 1px;
-  border-color: black;
+  border-color: $background-border-color;
   min-height: 42px;
   min-width: 1px;
   padding-left: 10px;
@@ -2892,7 +2899,7 @@ div.p-message_pane__foreword__description span {
 }
 .p-activity_flexpane__item_gutter {
   padding: 16px 16px 20px 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $background-border-color;
 }
 .p-classic_nav__team_header,
 .p-channel_sidebar {
@@ -3098,7 +3105,7 @@ div.p-message_pane__foreword__description span {
   align-items: center;
   background: black !important;
 }
-c-search_autocomplete__query_parts .token:hover {
+.c-search_autocomplete__query_parts .token:hover {
   color: black !important;
 }
 .p-classic_nav__model__title__name {

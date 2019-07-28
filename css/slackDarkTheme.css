@@ -2671,6 +2671,8 @@ div.p-message_pane__foreword__description span {
   padding-left: 43px;
   z-index: 200;
   color: #cccccc; }
+  .p-workspace__input .p-message_input_field input::before {
+    content: "> "; }
 
 .c-member_slug--link {
   font-size: 14.6px !important; }

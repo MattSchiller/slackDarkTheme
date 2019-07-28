@@ -523,7 +523,9 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
 .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected)
 .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
-.p-channel_sidebar__name,
+.p-channel_sidebar__name {
+  color: #00cf35; }
+
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__section_heading_label--unreads,
 .p-channel_sidebar__quickswitcher:hover {
@@ -663,7 +665,7 @@ a:hover {
 
 .p-channel_sidebar__badge,
 .p-channel_sidebar__banner--mentions {
-  background: #cd2056 !important;
+  background: #00cf35 !important;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2) !important; }
 
 .c-file_container {
@@ -674,7 +676,7 @@ a:hover {
   background: #141414 !important; }
 
 code {
-  color: #29ffe8 !important; }
+  color: #00cf35 !important; }
 
 .searchable_member_list_filter,
 #client-ui #team_list_container .searchable_member_list_search {
@@ -1941,8 +1943,8 @@ textarea {
   -moz-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   font-weight: 900;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 17px;
+  line-height: 16px;
   color: #cccccc; }
 
 .p-shortcuts_flexpane__shortcut {

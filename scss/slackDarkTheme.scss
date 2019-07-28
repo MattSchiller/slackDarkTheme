@@ -1,9 +1,12 @@
+$cyber-on-dark-color: #00cf35;
+$cyber-color: #67ff38;
+
 $background-color: #141414;
 $off-background-color-1: #474747;
 $off-background-color-2: #3e3e3e;
 $background-border-color: #333333;
 $text-color: #cccccc;
-$code-color: #29ffe8;
+$code-color: $cyber-on-dark-color; //#29ffe8
 $link-slack-internal-color: #36d4f6;
 $time-stamp-color: #6397d7;
 $button-color: #008952;
@@ -11,6 +14,7 @@ $button-hover-color: #006039;
 $mention-hover-color: #de5ea2;
 $unread-marker-color: #ff5656;
 $message-sender-color: #a4d677;
+$alert-on-background-color: #ddd;
 
 body {
   font-family: "Muli", sans-serif !important;
@@ -564,12 +568,16 @@ ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.n
   background: transparent !important;
   color: $text-color;
 }
+
 .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--selected)
   .p-channel_sidebar__name,
 .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected)
   .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
-  .p-channel_sidebar__name,
+  .p-channel_sidebar__name {
+  color: $cyber-on-dark-color;
+}
+
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__section_heading_label--unreads,
 .p-channel_sidebar__quickswitcher:hover {
@@ -709,7 +717,7 @@ a:hover {
 }
 .p-channel_sidebar__badge,
 .p-channel_sidebar__banner--mentions {
-  background: #cd2056 !important; // TODO
+  background: $cyber-on-dark-color !important;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2) !important;
 }
 .c-file_container {
@@ -1856,7 +1864,7 @@ textarea {
 }
 .alert {
   padding: 0.75rem 1rem 0.75rem 3rem;
-  border: 1px solid #ddd;
+  border: 1px solid $alert-on-background-color;
   background: #595959;
 }
 
@@ -1904,7 +1912,7 @@ textarea {
 .searchable_member_list_filter {
   padding: 1rem;
   position: relative;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $alert-on-background-color;
   background: $background-color;
 }
 #client-ui .searchable_member_list .team_list_item {
@@ -1997,7 +2005,7 @@ textarea {
   flex: 1;
   flex-direction: column;
   min-width: 1px;
-  box-shadow: inset 1px 0 0 0 #ddd;
+  box-shadow: inset 1px 0 0 0 $alert-on-background-color;
   background: $background-color;
 }
 .unread_empty_state_message {
@@ -2005,8 +2013,8 @@ textarea {
   -moz-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   font-weight: 900;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 17px;
+  line-height: 16px;
   color: $text-color;
 }
 .p-shortcuts_flexpane__shortcut {
@@ -2102,7 +2110,7 @@ textarea {
   color: $text-color;
 }
 .CodeMirror-cursor {
-  border-left-color: rgba(255, 255, 255, 1) !important;
+  border-left-color: white !important;
 }
 .CodeMirror-selected {
   background-color: #60609f !important;

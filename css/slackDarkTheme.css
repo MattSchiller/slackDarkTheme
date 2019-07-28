@@ -14,7 +14,7 @@ body {
 .p-member_directory__member_row:focus,
 .p-member_directory__member_row:focus-within,
 .p-member_directory__member_row:hover {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .p-call_subtype {
   border: 1px solid black !important;
@@ -48,7 +48,7 @@ body {
   border-top: 1px solid #4a4a4a !important; }
 
 .p-calls_settings_panel {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .p-file_viewer__header__meta__name {
   color: white !important; }
@@ -57,18 +57,18 @@ body {
   background: #666 !important; }
 
 .p-calls_invite_and_share_panel {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 input.c-input_text[disabled],
 input[type="text"].c-input_text[disabled],
 .p-prefs_modal__downloads_input {
-  background: #222222;
+  background: pink;
   color: #868686; }
 
 .p-calls_settings_panel,
 .p-calls_invite_and_share_panel,
 .p-reaction_menu {
-  background-color: #222222 !important;
+  background-color: pink !important;
   color: white !important; }
 
 .c-select_button {
@@ -76,14 +76,14 @@ input[type="text"].c-input_text[disabled],
   color: white; }
 
 .p-calls_settings_panel {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .c-message__call_attachment {
   border: 1px solid black !important;
   background: #353535 !important; }
 
 .c-input_text[disabled] {
-  background: #222222; }
+  background: pink; }
 
 .c-message__call_sub,
 .c-message__call_title {
@@ -137,7 +137,7 @@ div.p-message_pane__foreword__description span {
   letter-spacing: 0.3px !important; }
 
 div.c-virtual_list__scroll_container {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .light_theme ts-message .timestamp {
   line-height: 18px;
@@ -153,7 +153,7 @@ div.c-virtual_list__scroll_container {
 .c-scrollbar__hider,
 #team_menu,
 #team_menu_overlay {
-  background: #222222 !important; }
+  background: pink !important; }
 
 #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
   box-shadow: none !important;
@@ -176,12 +176,12 @@ div.c-virtual_list__scroll_container {
   background: #333539 !important; }
 
 .c-dialog__header {
-  background: #222222 !important;
+  background: pink !important;
   color: white; }
 
 .c-dialog__footer,
 div.c-message:hover {
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .c-dialog__title {
   color: white !important; }
@@ -313,7 +313,7 @@ ts-message .mention {
   background: transparent !important; }
 
 .c-input_select {
-  background: #222222 !important;
+  background: pink !important;
   color: white !important; }
 
 .c-label--inline .c-label__text {
@@ -421,7 +421,7 @@ ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.n
   border: 0px !important; }
 
 .p-flexpane_header {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .p-file_list__filters {
   background: #1f2021 !important; }
@@ -483,7 +483,7 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
   background-color: #545454; }
 
 #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
-  background: #222222; }
+  background: pink; }
 
 .p-channel_insights__message--truncate::before {
   background: linear-gradient(180deg, transparent, #232323 90%); }
@@ -679,7 +679,7 @@ a:hover {
   max-width: 600px; }
 
 .p-file_list__empty {
-  background: #222222 !important; }
+  background: pink !important; }
 
 code {
   color: #29ffe8 !important; }
@@ -782,7 +782,7 @@ a.file_download_link:hover,
 
 .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
 .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .c-deprecated_rounded_button:link,
 .c-deprecated_rounded_button:visited {
@@ -1106,7 +1106,7 @@ a.c-message__sender_link {
   color: white; }
 
 .sli_briefing {
-  background: #222222; }
+  background: pink; }
 
 .sli_briefing_preview__title {
   color: white; }
@@ -1117,7 +1117,7 @@ a.c-message__sender_link {
 
 .sli_briefing_preview_container::after,
 .sli_briefing_preview_container::before {
-  background: #222222;
+  background: pink;
   border: 1px solid #737373; }
 
 .sli_briefing_preview__description_text {
@@ -1209,7 +1209,7 @@ ts-message:not(.for_mention_display):not(.for_search_display):not(.for_top_resul
   color: white; }
 
 .c-fullscreen_modal__header {
-  background: #222222; }
+  background: pink; }
 
 .p-prefs_modal .c-fullscreen_modal__body {
   overflow-y: scroll;
@@ -1258,7 +1258,7 @@ textarea.c-input_textarea.c-input_textarea--with_hint,
 
 .channel_header {
   display: flex;
-  background: #222222; }
+  background: pink; }
 
 .channel_title .channel_name,
 .p-channel_sidebar__name,
@@ -1268,16 +1268,16 @@ textarea.c-input_textarea.c-input_textarea--with_hint,
   color: white !important; }
 
 #footer {
-  background: #222222; }
+  background: pink; }
 
 #flex_contents .heading {
   border-bottom: none;
   position: relative;
   z-index: 50;
-  background: #222222; }
+  background: pink; }
 
 #details_tab .channel_page_section {
-  background: #222222;
+  background: pink;
   position: relative;
   border-top: 1px solid #4c4c4c;
   color: white; }
@@ -1295,13 +1295,13 @@ textarea.c-input_textarea.c-input_textarea--with_hint,
   padding: 11px 0 11px 11px;
   border-top: 1px solid #4c4c4c;
   font-size: 14px;
-  background: #222222;
+  background: pink;
   color: white; }
 
 #details_tab .conversation_details .member_info,
 #details_tab .conversation_details .slackbot_info,
 .flex_content_scroller {
-  background: #222222; }
+  background: pink; }
 
 .p-channel_sidebar__channel--selected,
 .p-channel_sidebar__channel--selected:hover,
@@ -1833,7 +1833,7 @@ input[type="color"],
 input[type="search"],
 textarea {
   border-radius: 0 !important;
-  background: #222222; }
+  background: pink; }
 
 .searchable_member_list_filter .faux_input {
   font-size: 1rem;
@@ -1845,13 +1845,13 @@ textarea {
   appearance: none;
   outline: 0;
   color: #1d1c1d;
-  background: #222222; }
+  background: pink; }
 
 .searchable_member_list_filter {
   padding: 1rem;
   position: relative;
   border-bottom: 1px solid #ddd;
-  background: #222222; }
+  background: pink; }
 
 #client-ui .searchable_member_list .team_list_item {
   padding: 0.75rem 0.5rem 0.75rem 0.75rem;
@@ -1942,7 +1942,7 @@ textarea {
   flex-direction: column;
   min-width: 1px;
   box-shadow: inset 1px 0 0 0 #ddd;
-  background: #222222; }
+  background: pink; }
 
 .unread_empty_state_message {
   -webkit-transition: all 0.4s ease 0s;
@@ -2013,7 +2013,7 @@ textarea {
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  background: #222222; }
+  background: pink; }
 
 #col_messages {
   box-shadow: inset 1px 0 0 0 black !important; }
@@ -2275,7 +2275,7 @@ select {
 
 #team_tab #member_preview_scroller {
   width: 100%;
-  background: #222222; }
+  background: pink; }
 
 hr {
   border-top: 1px solid #575757; }
@@ -2289,7 +2289,7 @@ hr {
 .p-message_pane__top_banners:not(:empty)
 + div
 .c-message_list:not(.c-virtual_list--scrollbar):before {
-  box-shadow: 0 32px #222222; }
+  box-shadow: 0 32px pink; }
 
 #team_tab #member_preview_scroller .member_details .member_title:not(:empty) {
   color: #cccccc; }
@@ -2435,12 +2435,12 @@ ts-message .reply_bar:hover {
 #channel_list_container:not(.keyboard_active).not_scrolling
 .channel_browser_row:hover:not(.disabled),
 #channel_browser .channel_browser_row.highlighted {
-  background: #222222;
+  background: pink;
   border: 1px solid black; }
 
 #fs_modal .fs_modal_btn:hover {
   color: white;
-  background: #222222; }
+  background: pink; }
 
 .c-message__label {
   color: #34ffdc; }
@@ -2656,7 +2656,7 @@ div.p-message_pane__foreword__description span {
   letter-spacing: -0.3px !important; }
 
 .p-workspace--classic-nav .p-workspace__primary_view_footer {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .p-workspace__input .p-message_input_field {
   background: #474747;
@@ -2680,11 +2680,11 @@ div.p-message_pane__foreword__description span {
   background: black; }
 
 .c-texty_autocomplete__help {
-  background: #222222; }
+  background: pink; }
 
 .p-classic_nav__drag {
   -webkit-app-region: drag;
-  background: #222222;
+  background: pink;
   color: white; }
 
 .p-message_pane
@@ -2753,7 +2753,7 @@ div.p-message_pane__foreword__description span {
   margin-top: 16px;
   position: relative;
   padding: 0 12px;
-  background-color: #222222;
+  background-color: pink;
   display: inline-block;
   color: white; }
 
@@ -2821,7 +2821,7 @@ div.p-message_pane__foreword__description span {
 
 .p-classic_nav__team_header,
 .p-channel_sidebar {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .c-mrkdwn__broadcast--mention {
   background: #9651f9 !important;
@@ -2936,7 +2936,7 @@ div.p-message_pane__foreword__description span {
   transition: border 80ms ease-out, box-shadow 80ms ease-out;
   overflow: hidden;
   min-height: 36px;
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .p-invite_users_input__input_subtext {
   padding-top: 4px;
@@ -2997,12 +2997,12 @@ div.p-message_pane__foreword__description span {
   color: #a6a6a6 !important; }
 
 .c-message__editor__input {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .p-classic_nav__channel_header,
 .p-classic_nav__right_header {
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  background: #222222 !important; }
+  background: pink !important; }
 
 .p-classic_nav__channel_header__subtitle {
   font-size: 13px;
@@ -3085,7 +3085,7 @@ c-search_autocomplete__query_parts .token:hover {
 
 .p-message_pane_input__preview {
   padding: 24px 30px;
-  background-color: #222222 !important; }
+  background-color: pink !important; }
 
 .p-message_pane_input__preview_metadata {
   color: rgba(255, 255, 255, 0.7) !important; }
@@ -3110,7 +3110,7 @@ c-search_autocomplete__query_parts .token:hover {
   border-right: 1px solid #404040 !important; }
 
 .c-texty_autocomplete__result_highlight {
-  background: #222222 !important; }
+  background: pink !important; }
 
 .p-message_pane
 .p-message_pane__top_banners:not(:empty)

@@ -3,6 +3,7 @@ $cyber-color: #67ff38;
 
 $background-color: #141414;
 $off-background-color: #3e3e3e;
+$input-background-color: #344862;
 $background-border-color: #333333;
 $text-color: #cccccc;
 $code-color: #a6d7f6; //#29ffe8
@@ -10,10 +11,14 @@ $link-slack-internal-color: #36d4f6;
 $time-stamp-color: #6397d7;
 $button-color: #008952;
 $button-hover-color: #006039;
-$mention-hover-color: #de5ea2;
+$mention-link-color: #44899c;
+$mention-hover-color: #5ed3fa;
 $unread-marker-color: #ff5656;
 $message-sender-color: #c6c13f;
 $alert-on-background-color: #ddd;
+$broadcast-mention-color: #9651f9;
+
+$channel-name-size: 14px;
 
 body {
   font-family: "Muli", sans-serif !important;
@@ -149,7 +154,7 @@ span.c-message__body,
 a.c-message__sender_link,
 span.c-message_attachment__media_trigger.c-message_attachment__media_trigger--caption,
 div.p-message_pane__foreword__description span {
-  color: $text-color;
+  color: $text-color !important;
   font-size: 14px;
   letter-spacing: 0.3px !important;
 }
@@ -272,7 +277,7 @@ ts-message .mention {
 
 .c-member_slug--link {
   background: transparent;
-  color: #fcc973 !important;
+  color: $mention-link-color !important;
   font-weight: 600 !important;
   border: none !important;
   font-size: 13px;
@@ -581,7 +586,7 @@ ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.n
 .p-channel_sidebar__section_heading_label--unreads,
 .p-channel_sidebar__quickswitcher:hover {
   color: $background-color !important;
-  background: $text-color;
+  background: $text-color !important;
 }
 .p-download_item__actions {
   background: none;
@@ -596,7 +601,7 @@ ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.n
   color: $button-hover-color !important;
 }
 .p-channel_sidebar {
-  font-size: 14px !important;
+  font-size: $channel-name-size !important;
 }
 .c-file__meta {
   background: blue !important;
@@ -717,6 +722,7 @@ a:hover {
 }
 .p-channel_sidebar__badge,
 .p-channel_sidebar__banner--mentions {
+  color: $background-color !important;
   background: $cyber-on-dark-color !important;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2) !important;
 }
@@ -840,12 +846,11 @@ a.file_download_link:hover,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
   .p-channel_sidebar__name {
   // border-left: 2px solid $unread-marker-color;
-  color: $cyber-on-dark-color;
+  color: $cyber-on-dark-color !important;
   // padding-left: 6px;
   // height: 20px;
   overflow: hidden;
-  line-height: 16px;
-  font-size: 17px;
+  font-size: $channel-name-size;
   font-weight: 700;
 }
 .p-channel_sidebar {
@@ -1814,7 +1819,7 @@ textarea {
 }
 #channel_browser .channel_browser_divider {
   color: $text-color;
-  font-size: 14px;
+  font-size: $channel-name-size;
   width: 100%;
   padding: 4px 0 4px 12px;
   font-weight: 700;
@@ -2722,7 +2727,7 @@ ts-message .internal_member_link:hover {
   border-radius: 2px;
   font-size: 11px;
   padding: 1px 3px;
-  color: rgba(255, 255, 255, 1) !important;
+  color: $background-color !important;
   background-color: rgb(142, 60, 245);
   display: inline-block;
   height: 14px;
@@ -2747,7 +2752,7 @@ div.p-message_pane__foreword__description span {
   background: $background-color !important;
 }
 .p-workspace__input .p-message_input_field {
-  background: $off-background-color;
+  background: $input-background-color !important;
   border-radius: 4px;
   border-width: 1px;
   border-color: $background-border-color;
@@ -2814,7 +2819,7 @@ div.p-message_pane__foreword__description span {
   align-items: center;
   min-width: 0;
   cursor: pointer;
-  border: 1px solid rgb(113, 113, 113) !important;
+  border: 1px solid $background-border-color !important;
 }
 .p-classic_nav__right__search:hover .p-classic_nav__right__search__icon {
   color: $text-color;
@@ -2866,7 +2871,7 @@ div.p-message_pane__foreword__description span {
   grid-template-rows: 44px auto;
   grid-template-areas: "p-workspace__secondary_view_header" "p-workspace__secondary_view_contents";
   overflow: hidden;
-  border-left: 1px solid rgb(56, 56, 56) !important;
+  border-left: 1px solid $background-border-color !important;
 }
 .p-search_filter__from_name,
 .p-search_filter__in_channel,
@@ -2915,16 +2920,17 @@ div.p-message_pane__foreword__description span {
   background: $background-color !important;
 }
 .c-mrkdwn__broadcast--mention {
-  background: #9651f9 !important;
+  background: $broadcast-mention-color !important;
   color: $text-color !important;
   display: inline-block;
   height: 20px;
   line-height: 16px;
 }
-.c-mrkdwn__broadcast--mention:hover {
-  background: #ec51f9;
-  color: $text-color !important;
-}
+// Who wants to have something happen on broadcast hover?
+// .c-mrkdwn__broadcast--mention:hover {
+// background: #ec51f9 !important;
+// color: $text-color !important;
+// }
 .p-flexpane__body--empty {
   align-items: center;
   background-color: #141414 !important;
@@ -2943,11 +2949,11 @@ div.p-message_pane__foreword__description span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid rgb(51, 51, 51) !important;
+  border-bottom: 1px solid $background-border-color !important;
 }
 .p-channel_details__dm_section__tz_section {
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(29, 28, 29, 0.13);
+  border-bottom: 1px solid $background-border-color;
   color: $text-color;
 }
 .p-channel_details__dm_section__tz_label {

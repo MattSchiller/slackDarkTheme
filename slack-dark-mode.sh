@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Fetch our CSS in parallel ahead of time
   const cssPath =
     'https://raw.githubusercontent.com/MattSchiller/slackDarkTheme/master/css/slackDarkTheme.css';
-  let cssPromise = fetch(cssPath).then((response) => response.text());
+  let cssPromise = fetch(cssPath).then(response => response.text());
 
   let customCustomCSS = \`
    :root {

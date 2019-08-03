@@ -23,7 +23,7 @@ body {
 .c-button--outline-primary {
   transition: all 80ms linear;
   background: #3b3b3b !important;
-  border: 1px solid rgba(0, 0, 0, 0.3) !important; }
+  border: 1px solid #333333 !important; }
 
 .p-call_subtype__status,
 .p-call_subtype__title {
@@ -500,10 +500,6 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
   text-transform: capitalize;
   font-weight: 700 !important; }
 
-.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted)
-.p-channel_sidebar__name {
-  font-weight: bolder !important; }
-
 .p-download_item__container .p-download_item__name_row {
   color: #cccccc !important; }
 
@@ -524,13 +520,13 @@ ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.fo
 .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
 .p-channel_sidebar__name {
+  font-weight: bolder !important;
   color: #00cf35; }
 
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__section_heading_label--unreads,
 .p-channel_sidebar__quickswitcher:hover {
-  color: #141414 !important;
-  background: #cccccc !important; }
+  color: #44899c !important; }
 
 .p-download_item__actions {
   background: none; }
@@ -856,11 +852,10 @@ a:not(.member_name):not(.current_status_preset_option):not(.member_details_manag
   box-shadow: none !important;
   background: green !important; }
 
-.rxn.user_reacted .emoji_rxn_count {
-  color: #cccccc !important; }
-
+.rxn.user_reacted .emoji_rxn_count,
 .rxn.rxn_add_btn .c-icon--small-reaction {
-  color: #6f6f6f !important; }
+  color: #141414 !important;
+  background: #344862 !important; }
 
 ts-message .internal_member_link:hover {
   color: #c8a1ff !important; }
@@ -1328,7 +1323,7 @@ h4 {
   border-top: 1px solid #333333; }
 
 .c-message_list__unread_divider__label {
-  background: #ff5656;
+  background: #00cf35;
   border: 1px solid transparent;
   text-transform: capitalize;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); }
@@ -1797,7 +1792,7 @@ textarea {
 
 .alert {
   padding: 0.75rem 1rem 0.75rem 3rem;
-  border: 1px solid #ddd;
+  border: 1px solid #00cf35;
   background: #595959; }
 
 .alert {
@@ -1843,7 +1838,7 @@ textarea {
 .searchable_member_list_filter {
   padding: 1rem;
   position: relative;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #00cf35;
   background: #141414; }
 
 #client-ui .searchable_member_list .team_list_item {
@@ -1934,7 +1929,7 @@ textarea {
   flex: 1;
   flex-direction: column;
   min-width: 1px;
-  box-shadow: inset 1px 0 0 0 #ddd;
+  box-shadow: inset 1px 0 0 0 #00cf35;
   background: #141414; }
 
 .unread_empty_state_message {
@@ -2423,13 +2418,6 @@ ts-message .reply_bar:hover {
 .p-channel_sidebar__link--selected:hover {
   background: #343434 !important; }
 
-.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--selected)
-.p-channel_sidebar__name,
-.p-channel_sidebar__link--unread .p-channel_sidebar__name,
-.p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim)
-.p-channel_sidebar__name {
-  padding-top: 2px; }
-
 #channel_browser
 #channel_list_container:not(.keyboard_active).not_scrolling
 .channel_browser_row:hover:not(.disabled),
@@ -2671,8 +2659,6 @@ div.p-message_pane__foreword__description span {
   padding-left: 43px;
   z-index: 200;
   color: #cccccc; }
-  .p-workspace__input .p-message_input_field input::before {
-    content: "> "; }
 
 .c-member_slug--link {
   font-size: 14.6px !important; }

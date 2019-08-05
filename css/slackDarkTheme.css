@@ -39,6 +39,7 @@ limitations under the License.
   --edited: coral;
   --unread: #d71fc2;
   --secondary: #ffff00d4;
+  --tertiary: #8833f9;
   --smiley: var(--background-elevated);
 }
 
@@ -184,6 +185,14 @@ limitations under the License.
   font-weight: bold;
 }
 
+.p-flexpane_header__control:hover {
+  color: var(--primary) !important;
+}
+
+.c-label--pointer {
+  color: var(--text);
+}
+
 /* message sender */
 .c-link.c-message__sender_link,
 .c-message_attachment__author_name {
@@ -210,6 +219,15 @@ limitations under the License.
   background: var(--background);
 }
 
+.c-message__reply_bar {
+  background: var(--background-hover) !important;
+}
+
+.c-message__reply_bar_view_thread {
+  background: transparent;
+  color: var(--text);
+}
+
 .c-message__edited_label {
   color: var(--edited);
   opacity: 0.75;
@@ -226,6 +244,11 @@ limitations under the License.
 
 .c-timestamp__label::after {
   content: "]";
+}
+
+.c-message__gutter .c-timestamp__label::before,
+.c-message__gutter .c-timestamp__label::after {
+  content: "";
 }
 
 .p-emoji_picker__add_custom_emoji,
@@ -250,12 +273,20 @@ limitations under the License.
 }
 
 /* unread divider */
-.c-message_list__unread_divider__label,
-.c-message_list__unread_divider--ghost
-  .c-message_list__unread_divider__separator {
+.c-message_list__unread_divider__label {
   color: var(--unread);
   background: var(--background);
   border: 1px solid var(--unread);
+}
+
+.c-message_list_day_divider__pill {
+  top: -2px; /* offset the border */
+}
+
+.c-message_list__unread_divider--ghost
+  .c-message_list__unread_divider__separator {
+  max-height: 0;
+  border-bottom: 1px solid var(--unread);
 }
 
 .c-app_badge {
@@ -267,12 +298,33 @@ limitations under the License.
 .c-member_slug--link {
   background: var(--secondary) !important;
   color: var(--background) !important;
+  border-radius: 3px !important;
 }
 
 .c-member_slug:hover,
 .c-member_slug--link:hover {
   color: var(--secondary) !important;
   background: transparent !important;
+}
+
+.c-mrkdwn__user_group {
+  color: var(--background) !important;
+  background: var(--edited);
+}
+
+.c-mrkdwn__user_group:hover {
+  background: transparent;
+  color: var(--edited) !important;
+}
+
+.c-mrkdwn__broadcast--mention {
+  background: var(--tertiary);
+  color: var(--background);
+}
+
+.c-mrkdwn__broadcast--mention:hover {
+  color: var(--tertiary);
+  background: transparent;
 }
 
 /* emoji picker popover */

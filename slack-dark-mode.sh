@@ -2,19 +2,40 @@ JS="
 // First make sure the wrapper app is loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Fetch our CSS in parallel ahead of time
-  const cssPath = 'https://cdn.rawgit.com/widget-/slack-black-theme/master/custom.css';
+  const cssPath = 'https://raw.githubusercontent.com/MattSchiller/slackDarkTheme/master/css/slackDarkTheme.css';
   
   let cssPromise = fetch(cssPath).then((response) => response.text());
 
-  let customCustomCSS = '
+  let customCustomCSS = `
    :root {
       /* Modify these to change your theme colors: */
-      --primary: #09F;
-      --text: #CCC;
-      --background: #080808;
+      --primary: #00ff10d6;
+      --text: #ddd;
+      --background: #111;
       --background-elevated: #222;
+
+      /* These should be less important: */
+      --background-hover: rgba(255, 255, 255, 0.1);
+      --background-light-hover: rgba(100, 100, 100, 0.7);
+      --background-light: #aaa;
+      --background-bright: #fff;
+
+      --border-dim: #666;
+      --border-bright: var(--primary);
+
+      --text-bright: #1dbde8;
+      --text-bright-dim: #1dbde8a6;
+      --text-special: var(--primary);
+
+      --scrollbar-background: #000;
+      --scrollbar-border: var(--border-dim);
+
+      --edited: coral;
+      --unread: #d71fc2;
+      --secondary: #ffff00d4;
+      --smiley: var(--background-elevated);
    }
-   '
+   `
 
   // Insert a style tag into the wrapper view
   cssPromise.then((css) => {
@@ -31,6 +52,6 @@ SLACK_FILE_PATH="${SLACK_RESOURCES_DIR}/app.asar.unpacked/dist/ssb-interop.bundl
 echo "Adding Dark Theme Code to Slack... "
 echo "This script requires sudo privileges." && echo "You'll need to provide your password."
 
-# sudo npx asar extract ${SLACK_RESOURCES_DIR}/app.asar ${SLACK_RESOURCES_DIR}/app.asar.unpacked
+sudo npx asar extract ${SLACK_RESOURCES_DIR}/app.asar ${SLACK_RESOURCES_DIR}/app.asar.unpacked
 # sudo tee -a "${SLACK_FILE_PATH}" > /dev/null <<< "$JS"
 sudo npx asar pack ${SLACK_RESOURCES_DIR}/app.asar.unpacked ${SLACK_RESOURCES_DIR}/app.asar

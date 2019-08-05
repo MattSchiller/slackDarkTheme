@@ -49,6 +49,7 @@ limitations under the License.
 .p-classic_nav__team_header:hover,
 .p-classic_nav__channel_header.p-classic_nav__model_header,
 .p-classic_nav__right_header.p-classic_nav__right_header--whats_new_showing,
+.c-message--editing,
 .c-virtual_list__sticky_container {
   background: var(--background-elevated);
 }
@@ -80,6 +81,7 @@ limitations under the License.
   background: var(--background-light-hover);
 }
 
+.c-message__editor__input,
 .p-message_input_field {
   background: var(--background) !important;
   border-color: var(--border-dim) !important;
@@ -104,6 +106,7 @@ limitations under the License.
   border: 1px solid var(--border-dim);
 }
 
+.c-menu_item__label,
 .c-menu_item__icon,
 .c-menu_item__shortcut {
   color: var(--text);
@@ -148,13 +151,13 @@ limitations under the License.
 
 /*"more unreads" bottom */
 .p-channel_sidebar__banner--bottom {
-  border-bottom: none;
+  border-bottom: none !important;
   border-radius: 15px 15px 0 0;
 }
 
 /*"more unreads" top*/
 .p-channel_sidebar__banner--top {
-  border-top: none;
+  border-top: none !important;
   border-radius: 0 0 15px 15px;
 }
 
@@ -212,7 +215,9 @@ limitations under the License.
 .c-message__body,
 .c-message_attachment__text,
 .c-message_attachment__title,
-.c-message_attachment__field_value {
+.c-message_attachment__field_title,
+.c-message_attachment__field_value,
+.c-message_kit__file__meta__text {
   color: var(--text);
 }
 
@@ -243,6 +248,8 @@ limitations under the License.
   font-style: italic;
 }
 
+.c-message_attachment__media_trigger,
+.c-message_attachment__footer_ts.c-message_attachment__part,
 .c-timestamp__label {
   color: var(--text-bright-dim);
 }

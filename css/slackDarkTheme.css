@@ -288,7 +288,7 @@ limitations under the License.
   border: 1px solid var(--unread);
 }
 
-.c-message_list_day_divider__pill {
+.c-message_list__day_divider__label__pill {
   top: -2px; /* offset the border */
 }
 

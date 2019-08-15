@@ -109,6 +109,14 @@ limitations under the License.
   background: transparent;
 }
 
+.c-button--outline:hover,
+.c-button-unstyled:hover,
+.c-icon_button--light:hover,
+.c-icon_button--light.c-button-unstyled:hover {
+  color: var(--text);
+  background: transparent;
+}
+
 .c-button--outline {
   border: 1px solid var(--text);
 }
@@ -116,14 +124,6 @@ limitations under the License.
 .c-button--outline:hover {
   border: 1px solid var(--text-bright);
   color: var(--text-bright) !important;
-}
-
-.c-button--outline,
-.c-button-unstyled,
-.c-icon_button--light,
-.c-icon_button--light.c-button-unstyled {
-  color: var(--text);
-  background: transparent;
 }
 
 /* profile popover */
@@ -335,6 +335,10 @@ limitations under the License.
 
 .c-scrollbar__bar {
   border: 1px solid var(--scrollbar-border);
+  background: var(--background-elevated);
+}
+
+.c-message_actions__container {
   background: var(--background-elevated);
 }
 
@@ -1102,10 +1106,6 @@ ts-mention.ts_tip:hover {
   /*background-color: var(--background-light) !important;
  transition: background-color 200ms ease-in;*/
   height: 28px;
-}
-
-.rxn[data-emoji]:hover {
-  /*background-color: var(--background-bright) !important;*/
 }
 
 .rxn[data-emoji] .emoji_rxn_count {

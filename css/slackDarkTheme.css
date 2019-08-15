@@ -601,6 +601,30 @@ limitations under the License.
   color: var(--text-bright);
 }
 
+/* Main Menu */
+
+.p-classic_nav__team_menu__blurb__right,
+.p-classic_nav__team_menu__blurb__sub,
+.p-classic_nav__team_menu__blurb_plan {
+  color: var(--text);
+}
+
+.c-menu_item__header {
+  color: var(--text-bright);
+}
+
+.c-menu_separator__separator {
+  border-color: var(--text);
+}
+
+.c-menu_item__label {
+  color: var(--text-bright) !important;
+}
+
+.c-fullscreen_modal__header {
+  background: var(--background-elevated);
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 h1,
 h2,

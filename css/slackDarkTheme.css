@@ -1,5 +1,6 @@
 /*
 Copyright 2017 Bryan Keller (https://github.com/widget-)
+Updated extensively 2019 Matt Schiller (https://github.com/mattschiller)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -13,8 +14,38 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+:root {
+  /* Modify these to change your theme colors: */
+  --primary: #00ff10d6;
+  --text: #ddd;
+  --background: #111;
+  --background-elevated: #222;
 
-/* Matt Schiller added (~8-15-2019): */
+  /* These should be less important: */
+  --background-hover: rgba(255, 255, 255, 0.1);
+  --background-light-hover: rgba(100, 100, 100, 0.7);
+  --background-light: #aaa;
+  --background-bright: #fff;
+
+  --border-dim: #666;
+  --border-bright: var(--primary);
+
+  --text-bright: #1dbde8;
+  --text-bright-dim: #1dbde8a6;
+  --text-special: var(--primary);
+
+  --scrollbar-background: #000;
+  --scrollbar-border: var(--border-dim);
+
+  --edited: coral;
+  --unread: #d71fc2;
+  --secondary: #ffff00d4;
+  --tertiary: #8833f9;
+  --smiley: var(--background-elevated);
+  --caret-color: #e30000;
+}
+
+/* MS ADDED: */
 .p-classic_nav__right_header,
 .p-classic_nav__team_header,
 .p-classic_nav__team_header:hover,
@@ -187,6 +218,18 @@ limitations under the License.
   border-radius: 24px;
 }
 
+/* channel side icon */
+.p-channel_sidebar__channel:not(.p-channel_sidebar__channel--im):not(.p-channel_sidebar__channel--mpim):before {
+  content: ">";
+  font-size: 10pt;
+  padding-left: 7px;
+}
+
+:not(.p-channel_sidebar__channel--muted).p-channel_sidebar__channel--unread:before {
+  color: var(--primary);
+  font-weight: bold;
+}
+
 /*"more unreads"*/
 
 .p-channel_sidebar__badge,
@@ -249,8 +292,13 @@ limitations under the License.
   color: var(--text-bright) !important;
 }
 
+.c-icon--cloud-download,
 .c-label--pointer {
   color: var(--text);
+}
+
+.c-file__action_button--icon:hover .c-icon--cloud-download {
+  color: var(--text-bright);
 }
 
 .p-channel_details_section__content,

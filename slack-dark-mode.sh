@@ -6,36 +6,50 @@ document.addEventListener('DOMContentLoaded', function() {
   
   let cssPromise = fetch(cssPath).then((response) => response.text());
 
-  let customCustomCSS = `
+  let customCustomCSS = '
    :root {
-      /* Modify these to change your theme colors: */
-      --primary: #00ff10d6;
-      --text: #ddd;
-      --background: #111;
-      --background-elevated: #222;
+    /* Modify these to change your theme colors: */
+    --primary: #00ff10d6;
+    --text: #ddd;
+    --background: #111;
+    --background-elevated: #222;
 
-      /* These should be less important: */
-      --background-hover: rgba(255, 255, 255, 0.1);
-      --background-light-hover: rgba(100, 100, 100, 0.7);
-      --background-light: #aaa;
-      --background-bright: #fff;
+    /* These should be less important: */
+    --background-hover: rgba(255, 255, 255, 0.1);
+    --background-light-hover: rgba(100, 100, 100, 0.7);
+    --background-light: #aaa;
+    --background-bright: #fff;
 
-      --border-dim: #666;
-      --border-bright: var(--primary);
+    --border-dim: #666;
+    --border-bright: var(--primary);
 
-      --text-bright: #1dbde8;
-      --text-bright-dim: #1dbde8a6;
-      --text-special: var(--primary);
+    --text-bright: #1dbde8;
+    --text-bright-dim: #1dbde8a6;
+    --text-special: var(--primary);
 
-      --scrollbar-background: #000;
-      --scrollbar-border: var(--border-dim);
+    --scrollbar-background: #000;
+    --scrollbar-border: var(--border-dim);
 
-      --edited: coral;
-      --unread: #d71fc2;
-      --secondary: #ffff00d4;
-      --smiley: var(--background-elevated);
+    --edited: coral;
+    --unread: #d71fc2;
+    --secondary: #ffff00d4;
+    --tertiary: #8833f9;
+    --smiley: var(--background-elevated);
+    --caret-color: #e30000;
+
+    /* channel side icon */
+    .p-channel_sidebar__channel:not(.p-channel_sidebar__channel--im):not(.p-channel_sidebar__channel--mpim):before {
+      content: ">";
+      font-size: 10pt;
+      padding-left: 7px;
+    }
+
+    :not(.p-channel_sidebar__channel--muted).p-channel_sidebar__channel--unread:before {
+      color: var(--primary);
+      font-weight: bold;
+    }
    }
-   `
+   '
 
   // Insert a style tag into the wrapper view
   cssPromise.then((css) => {

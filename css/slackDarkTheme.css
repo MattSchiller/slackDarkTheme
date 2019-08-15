@@ -41,6 +41,7 @@ limitations under the License.
   --secondary: #ffff00d4;
   --tertiary: #8833f9;
   --smiley: var(--background-elevated);
+  --caret-color: #e30000;
 }
 
 /* MS ADDED: */
@@ -82,10 +83,21 @@ limitations under the License.
   background: var(--background-light-hover);
 }
 
+.c-texty_input,
 .c-message__editor__input,
 .p-message_input_field {
   background: var(--background) !important;
   border-color: var(--border-dim) !important;
+  caret-color: var(--caret-color);
+}
+
+.c-texty_input:hover,
+.c-texty_input:focus-within,
+.c-message__editor__input:hover,
+.p-message_input_field:hover,
+.c-message__editor__input:focus-within,
+.p-message_input_field:focus-within {
+  border-color: var(--border-bright) !important;
 }
 
 .p-classic_nav__right__search,
@@ -101,6 +113,20 @@ limitations under the License.
   color: var(--text-bright);
 }
 
+/* buttons */
+
+.c-button--primary {
+  background: var(--text-bright);
+  color: var(--background);
+  border: 1px solid transparent;
+}
+
+.c-button--primary:hover {
+  color: var(--text-bright);
+  background: var(--background);
+  border: 1px solid var(--text-bright);
+}
+
 .c-button--outline,
 .c-button-unstyled,
 .c-icon_button--light,
@@ -113,7 +139,7 @@ limitations under the License.
 .c-button-unstyled:hover,
 .c-icon_button--light:hover,
 .c-icon_button--light.c-button-unstyled:hover {
-  color: var(--text);
+  color: var(--text-bright);
   background: transparent;
 }
 
@@ -154,6 +180,15 @@ limitations under the License.
   background: var(--background);
 }
 
+.p-classic_nav__model__title__info__item {
+  background: var(--background-elevated);
+  color: var(--text);
+}
+
+.p-classic_nav__model__title__info__topic__text:hover {
+  color: var(--background);
+}
+
 .p-message_pane__foreword__title {
   color: var(--text-bright);
 }
@@ -170,10 +205,16 @@ limitations under the License.
   border-color: var(--text-bright-dim);
 }
 
+.p-highlights_section__group_title_line {
+  border: 1px solid var(--text-bright-dim);
+  border-top: none;
+}
+.p-highlights_section__group_title_label,
 .c-message_list__day_divider__label__pill {
   border: 1px solid var(--text-bright-dim);
   color: var(--text-bright);
   background: var(--background);
+  border-radius: 24px;
 }
 
 /* channel side icon */
@@ -247,11 +288,48 @@ limitations under the License.
 }
 
 .p-flexpane_header__control:hover {
-  color: var(--primary) !important;
+  color: var(--text-bright) !important;
 }
 
 .c-label--pointer {
   color: var(--text);
+}
+
+.p-channel_details_section__content,
+.p-channel_details__heading {
+  color: var(--text);
+}
+
+.c-message_kit__message,
+.c-pillow_file_container.p-contextual_file.p-channel_details__shared_files__file {
+  border: 1px solid var(--border-dim);
+  background: var(--background);
+}
+
+.c-message_kit__message:hover,
+.c-pillow_file_container.p-contextual_file.p-channel_details__shared_files__file:hover {
+  border: 1px solid var(--text-bright);
+  background: var(--background);
+}
+
+.c-pillow_file__title {
+  color: var(--text);
+}
+
+.c-button-unstyled.p-channel_details__member_list__member_btn,
+.c-button-unstyled.p-channel_details_apps__row {
+  color: var(--secondary);
+}
+
+.c-button-unstyled.p-channel_details__member_list__member_btn:hover div,
+.c-button-unstyled.p-channel_details__member_list__member_btn:hover .c-icon,
+.c-button-unstyled.p-channel_details_apps__row:hover div,
+.c-button-unstyled.p-channel_details_apps__row:hover .c-icon {
+  color: var(--primary) !important;
+}
+
+.p-channel_details__notification_prefs_section__notification_warning {
+  background: var(--background);
 }
 
 /* message sender */
@@ -316,6 +394,8 @@ limitations under the License.
 .c-message__gutter .c-timestamp__label::after {
   content: "";
 }
+
+/* emoji picker */
 
 .p-emoji_picker__add_custom_emoji,
 .p-emoji_picker__skintone_btn_container,
@@ -480,6 +560,16 @@ limitations under the License.
 .c-reaction:hover .c-reaction__count,
 .c-reaction--reacted:hover .c-reaction__count {
   color: var(--text-bright) !important;
+}
+
+/* dialog modal */
+
+.c-dialog__header,
+.c-dialog__body,
+.c-dialog__footer,
+.c-dialog__title {
+  background: var(--background);
+  color: var(--text);
 }
 
 /* fullscreen modal */

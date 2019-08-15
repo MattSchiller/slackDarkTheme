@@ -51,11 +51,12 @@ limitations under the License.
 .p-classic_nav__right_header.p-classic_nav__right_header--whats_new_showing,
 .c-message--editing,
 .c-virtual_list__sticky_container {
-  background: var(--background-elevated);
+  background: var(--background-elevated) !important;
 }
 
 /* footer */
-.p-workspace__primary_view_footer {
+.p-workspace__primary_view_footer,
+.workspace__primary_view_footer {
   background: var(--background);
 }
 
@@ -94,9 +95,41 @@ limitations under the License.
   border-color: var(--text) !important;
 }
 
+.p-channel_sidebar__section_heading_plus:hover,
+.p-channel_sidebar__close:hover,
+.c-link--button:hover {
+  color: var(--text-bright);
+}
+
+.c-button--outline,
 .c-button-unstyled,
 .c-icon_button--light,
 .c-icon_button--light.c-button-unstyled {
+  color: var(--text);
+  background: transparent;
+}
+
+.c-button--outline {
+  border: 1px solid var(--text);
+}
+
+.c-button--outline:hover {
+  border: 1px solid var(--text-bright);
+  color: var(--text-bright) !important;
+}
+
+.c-button--outline,
+.c-button-unstyled,
+.c-icon_button--light,
+.c-icon_button--light.c-button-unstyled {
+  color: var(--text);
+  background: transparent;
+}
+
+/* profile popover */
+.p-member_profile_card,
+.p-member_profile_field__label {
+  background: var(--background-elevated);
   color: var(--text);
 }
 
@@ -108,12 +141,16 @@ limitations under the License.
 
 .c-menu_item__label,
 .c-menu_item__icon,
-.c-menu_item__shortcut {
+.c-menu_item__shortcut,
+.c-menu_item__description,
+.c-icon--external-link:before {
   color: var(--text);
+  -webkit-text-fill-color: var(--text);
 }
 
 /* channel banner */
-.c-virtual_list__item {
+.c-virtual_list__item,
+.c-virtual_list__scroll_container {
   background: var(--background);
 }
 
@@ -137,6 +174,18 @@ limitations under the License.
   border: 1px solid var(--text-bright-dim);
   color: var(--text-bright);
   background: var(--background);
+}
+
+/* channel side icon */
+.p-channel_sidebar__channel:not(.p-channel_sidebar__channel--im):not(.p-channel_sidebar__channel--mpim):before {
+  content: ">";
+  font-size: 10pt;
+  padding-left: 7px;
+}
+
+:not(.p-channel_sidebar__channel--muted).p-channel_sidebar__channel--unread:before {
+  color: var(--primary);
+  font-weight: bold;
 }
 
 /*"more unreads"*/
@@ -233,13 +282,14 @@ limitations under the License.
   background: var(--background);
 }
 
-.c-message__reply_bar {
-  background: var(--background-hover) !important;
+.c-message__reply_bar,
+.c-message__reply_bar:hover {
+  background-color: var(--background-hover) !important;
 }
 
 .c-message__reply_bar_view_thread {
-  background: transparent;
-  color: var(--text);
+  background-color: transparent !important;
+  color: var(--text-bright);
 }
 
 .c-message__edited_label {
@@ -302,7 +352,7 @@ limitations under the License.
 .c-message_list__unread_divider--ghost
   .c-message_list__unread_divider__separator {
   max-height: 0;
-  border-bottom: 1px solid var(--unread);
+  border-color: var(--unread);
 }
 
 .c-app_badge {
@@ -338,9 +388,20 @@ limitations under the License.
   color: var(--background);
 }
 
-.c-mrkdwn__broadcast--mention:hover {
-  color: var(--tertiary);
-  background: transparent;
+/* archives banner */
+.p-archives_banner {
+  background-color: var(--background-elevated);
+  color: var(--text);
+  border: 1px solid var(--border-dim);
+  border-bottom: none;
+}
+
+.p-archives_banner__jump {
+  color: var(--text-bright);
+}
+
+.p-archives_banner__jump:hover {
+  color: var(--primary);
 }
 
 /* emoji picker popover */
@@ -405,7 +466,7 @@ limitations under the License.
 .c-reaction:hover,
 .c-reaction--reacted:hover {
   background: var(--background);
-  box-shadow: inset 0 0 0 1.5px var(--primary);
+  box-shadow: inset 0 0 0 1.5px var(--text-bright);
 }
 
 .c-reaction_add:hover .c-icon--small-reaction:before {
@@ -414,7 +475,36 @@ limitations under the License.
 
 .c-reaction:hover .c-reaction__count,
 .c-reaction--reacted:hover .c-reaction__count {
-  color: var(--primary) !important;
+  color: var(--text-bright) !important;
+}
+
+/* fullscreen modal */
+
+.p-dm_browser_modal__list_row--active,
+.c-fullscreen_modal__body,
+.c-multi_select_input {
+  background: var(--background);
+  color: var(--text);
+}
+
+.p-dm_browser_modal__list_heading,
+.c-base_entity__subtext,
+.c-base_list_entity__secondary_content,
+.p-dm_browser_modal__controls_meta {
+  color: var(--text);
+}
+
+.p-dm_browser_modal__list_row_meta {
+  color: var(--text-bright-dim);
+}
+
+.p-dm_browser_modal__option:hover,
+.c-base_list_entity:hover {
+  background: var(--background-hover) !important;
+}
+
+.c-alert__message {
+  color: var(--text-bright);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

@@ -1,6 +1,5 @@
 /*
 Copyright 2017 Bryan Keller (https://github.com/widget-)
-Updated extensively 2019 Matt Schiller (https://github.com/mattschiller)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -307,13 +306,13 @@ limitations under the License.
 }
 
 .c-message_kit__message,
-.c-pillow_file_container.p-contextual_file.p-channel_details__shared_files__file {
+.c-pillow_file_container {
   border: 1px solid var(--border-dim);
   background: var(--background);
 }
 
 .c-message_kit__message:hover,
-.c-pillow_file_container.p-contextual_file.p-channel_details__shared_files__file:hover {
+.c-pillow_file_container:hover {
   border: 1px solid var(--text-bright);
   background: var(--background);
 }

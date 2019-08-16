@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   let cssPromise = fetch(cssPath).then((response) => response.text());
 
-  let customCustomCSS = '
+  let customPalette = `
    :root {
     /* Modify these to change your theme colors: */
     --primary: #00ff10d6;
@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     --tertiary: #8833f9;
     --smiley: var(--background-elevated);
     --caret-color: #e30000;
+   `
 
+   let customCSSRules = `
     /* channel side icon */
     .p-channel_sidebar__channel:not(.p-channel_sidebar__channel--im):not(.p-channel_sidebar__channel--mpim):before {
       content: ">";
@@ -49,13 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
       font-weight: bold;
     }
    }
-   '
+   `
 
   // Insert a style tag into the wrapper view
   cssPromise.then((css) => {
     let s = document.createElement('style');
     s.type = 'text/css';
-    s.innerHTML = css + customCustomCSS;
+    s.innerHTML = customPalette + css + customCSSRules;
     document.head.appendChild(s);
   });
 });"

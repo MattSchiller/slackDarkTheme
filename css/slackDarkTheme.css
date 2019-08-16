@@ -1,5 +1,6 @@
 /*
 Copyright 2017 Bryan Keller (https://github.com/widget-)
+Updated 2019 Matt Schiller (https://github.com/mattschiller);
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -54,7 +55,9 @@ limitations under the License.
 .c-virtual_list__sticky_container {
   background: var(--background-elevated) !important;
 }
-
+.p-channel_sidebar__navigation_bar {
+  background: var(--background);
+}
 /* footer */
 .p-workspace__primary_view_footer,
 .workspace__primary_view_footer {
@@ -523,7 +526,7 @@ limitations under the License.
 
 /* scrollbar hider? */
 .c-scrollbar__hider::before {
-  background: var(--background) !important;
+  background: var(--background-elevated) !important;
 }
 
 /* Reaction Buttons */
@@ -663,7 +666,7 @@ div.client_channels_list_container {
 }
 
 nav.p-channel_sidebar {
-  background-color: var(--background-elevated);
+  background-color: var(--background);
   color: var(--text);
 }
 
